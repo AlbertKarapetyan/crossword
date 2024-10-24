@@ -1,12 +1,12 @@
 package services
 
 import (
-	model "crossword/internal/database/models"
+	"crossword/internal/database/models"
 )
 
 type CategoryServiceI interface {
-	Create(category *model.Category) error
-	Get(id uint) (*model.Category, error)
-	Update(category *model.Category) error
+	Create(category *models.Category) (*models.Category, error)
+	Get(id uint) (*models.Category, error)
+	Update(category *models.Category) (*models.Category, error)
 	Delete(id uint) error
 }
